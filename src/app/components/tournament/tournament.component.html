@@ -1,0 +1,27 @@
+<div *ngIf="ready" class="fullscreen py-5">
+  <h1>{{tournament.name}}</h1>
+  <hr>
+  <h2 class="mb-5">Round number <strong class="ml-1">{{actualRound}}</strong></h2>
+  <h2>Teams</h2>
+  <div class="d-flex align-items-center justify-content-center flex-wrap mb-5">
+    <div class="d-flex mb-3" *ngFor="let team of tournament.teams, let index = index">
+      <div class="jumbotron jumbo-field py-4 m-0">
+        <h3>Team {{ index +1 }}</h3>
+        <li *ngFor="let player of team.people">{{player}}</li>
+        <h5 class="mt-3">Points earned</h5>
+        <input type="number" [(ngModel)]="points[index]" class="form-control" />
+      </div>
+      <span *ngIf="index+1 !== teamsNumber" class="d-flex align-items-center mx-2">vs</span>
+    </div>
+  </div>
+  Time: {{tournament.tournamentTime}} min
+  <hr>
+  <button class="btn btn-lg custom-button"
+          *ngIf="!isLastRound"
+          (click)="endRound();">End Round
+  </button>
+  <button class="btn btn-lg custom-button"
+          *ngIf="isLastRound"
+          (click)="endTournament()">End Tournament
+  </button>
+</div>

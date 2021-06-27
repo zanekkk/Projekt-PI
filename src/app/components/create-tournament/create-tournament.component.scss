@@ -1,0 +1,67 @@
+@import '~src/sass/variables.scss';
+@import '~src/sass/mixins.scss';
+
+.box select {
+  @include button-shadow;
+  background-color: $theme-color-dark;
+  color: $theme-font-color;
+  border-radius: .2rem;
+  padding: 1rem;
+  border: none;
+  font-size: 1.25rem;
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+select:hover {
+  cursor: pointer !important;
+  color: $theme-color-light !important;
+}
+
+.container {
+  max-width: 50%;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  border-radius: .3rem;
+}
+
+li {
+  @include shadow-light;
+  background-color: $theme-color-medium;
+  border: solid 2px $theme-color-dark;
+  font-size: 1.25rem;
+  border-radius: .3rem;
+  transition: background-color 250ms ease-out;
+  overflow: auto;
+}
+
+.checked {
+  @include shadow;
+  background-color: $theme-color-dark;
+  transition: background-color 250ms ease-in;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: invert(30%);
+}
+
+hr {
+  margin-top: .1rem;
+  margin-bottom: .5rem;
+}
+
+.custom-button {
+  border-radius: .3rem;
+  font-size: 2rem;
+}

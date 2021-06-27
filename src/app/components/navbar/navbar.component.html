@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light">
+  <a href="#">
+    <img width="100" height="60" src="../../../assets/logo.png" alt="BattleBoard Logo" />
+  </a>
+
+  <div class="flex-grow-1"></div>
+  
+  <div *ngIf="authService.isLoggedIn">
+    <button class="btn btn-lg custom-button px-4" routerLink="choose-game">Find a Game</button>
+    <button class="btn btn-lg custom-button px-4 mx-2" routerLink="your-tournaments">Your Tournaments</button>
+    <button class="btn btn-lg custom-button px-4" routerLink="ranking">Ranking</button>
+  </div>
+  
+  <div class="flex-grow-1"></div>
+
+  <div *ngIf="authService.isLoggedIn">
+    <button class="btn btn-lg custom-button mx-2 p-2" routerLink="user-profile">
+      <img class="user" src="../../../assets/user.svg">
+    </button>
+    <button class="btn btn-lg custom-button px-4"
+            (click)="authService.signOut()">
+            Log out
+    </button>
+  </div>
+
+  <button *ngIf="!authService.isLoggedIn && isHomePage"
+          class="btn btn-lg custom-button px-4"
+          routerLink="/sign-in">
+          Log in
+  </button>
+</nav>

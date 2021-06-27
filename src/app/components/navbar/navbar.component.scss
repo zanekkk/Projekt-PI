@@ -1,0 +1,12 @@
+@import '~src/sass/variables.scss';
+@import '~src/sass/mixins.scss';
+
+nav {
+    @include shadow;
+    background-color: $theme-color-special;
+
+    .user {
+        width: 35px;
+        filter: invert(95%);
+    }
+}

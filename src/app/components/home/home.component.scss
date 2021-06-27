@@ -1,0 +1,29 @@
+@import '~src/sass/variables.scss';
+@import '~src/sass/mixins.scss';
+
+.hero-banner {
+  background: url("../../../assets/background.jpg");
+  background-size: cover;
+
+  h1 {
+    color: $theme-color-light;
+  }
+}
+
+a {
+  color: $theme-font-color;
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.games:hover {
+  cursor: pointer;
+}
+
+table {
+  @include shadow-light;
+}

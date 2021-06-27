@@ -1,0 +1,29 @@
+.fullscreen {
+    width: 100vw;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+
+    .jumbo-field {
+        justify-content: start;
+        align-items: flex-start;
+    }
+    
+    hr {
+        width: 75%;
+        margin-top: .1rem;
+        margin-bottom: .5rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}
+

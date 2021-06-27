@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/BattleBoard",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
